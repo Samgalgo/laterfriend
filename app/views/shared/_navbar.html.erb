@@ -1,0 +1,43 @@
+<% if false %>
+ #this is a partial that will contain the NAVBAR with some IF statements to 
+ #show that if the user is logged in then it should have some menu options
+ #that say Sign out
+ #and if the user is not logged in yet then the menu options will say Sign up or Log in
+ #NOTE:the sign out is not destroying the session yet, manually deleting cookies to logout
+
+<% end %>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Later Friend</a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto ">
+        <% if user_signed_in? %>
+            <li class="nav-item active">
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete%>
+            </li>
+        <% else %>
+           <li class="nav-item active">
+             <%= link_to 'Register', new_user_registration_path, class: 'nav-link' %>
+           </li>
+           <li class="nav-item active">
+           <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %> 
+           </li>
+           
+           </div>
+        <% end %>
+      </ul>
+   
+  </div>
+</nav>
+
+ 
+
+
+
+

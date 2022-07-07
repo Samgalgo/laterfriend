@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @note.type %>
+</p>
+
+<p>
+  <strong>Desciption:</strong>
+  <%= @note.desciption %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @note.status %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @note.student_id %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>
