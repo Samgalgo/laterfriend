@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type %>
+    <%= form.label :category %>
+    <%= form.text_field :category %>
   </div>
 
   <div class="field">
@@ -26,9 +26,12 @@
     <%= form.text_field :status %>
   </div>
 
-  <div class="field">
-    <%= form.label :student_id %>
-    <%= form.text_field :student_id %>
+ 
+
+  <div class="drop_menu">
+  <%= "Student:" %>
+  <br>
+    <%= form.collection_select :student_id, Student.all, :id, :name, include_blank: true %>
   </div>
 
   <div class="actions">

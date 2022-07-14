@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<div class="card shadow p-4 mb-5 bg-white rounded">
+
 <p>
   <strong>Name:</strong>
   <%= @student.name %>
@@ -19,6 +21,8 @@
   <strong>User:</strong>
   <%= @student.user_id %>
 </p>
+
+</div>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>

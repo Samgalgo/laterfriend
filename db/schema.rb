@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_01_000741) do
+ActiveRecord::Schema.define(version: 2022_07_07_225217) do
 
   create_table "notes", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
     t.text "desciption"
     t.string "status"
     t.integer "student_id", null: false

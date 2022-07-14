@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Type</th>
+      <th>Category</th>
       <th>Desciption</th>
       <th>Status</th>
       <th>Student</th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @notes.each do |note| %>
       <tr>
-        <td><%= note.type %></td>
+        <td><%= note.category %></td>
         <td><%= note.desciption %></td>
         <td><%= note.status %></td>
         <td><%= note.student_id %></td>
@@ -31,3 +31,7 @@
 <br>
 
 <%= link_to 'New Note', new_note_path %>
+
+<br>
+
+<%= link_to 'Back to Students', students_path %>

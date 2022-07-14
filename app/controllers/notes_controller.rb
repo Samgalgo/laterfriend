@@ -64,8 +64,12 @@ class NotesController < ApplicationController
       @note = Note.find(params[:id])
     end
 
+    def set_student
+      @student = Student.find(params[:id])
+    end 
+
     # Only allow a list of trusted parameters through.
     def note_params
-      params.require(:note).permit(:type, :desciption, :status, :student_id)
+      params.require(:note).permit(:category, :desciption, :status, :student_id)
     end
 end
